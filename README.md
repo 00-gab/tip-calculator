@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Code](https://github.com/00-gab/tip-calculator.git)
+- Live Site URL: [Demo](https://00-gab.github.io/tip-calculator/)
 
 ## My process
 
@@ -45,4 +45,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/00-gab)
+- Frontend Mentor - [@00-gab](https://www.frontendmentor.io/profile/00-gab)

@@ -4,12 +4,6 @@
 	box-sizing: border-box;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 :root {
 	--light-grayish-cyan: hsl(185, 41%, 84%);
 	--bg-white: hsl(0, 0%, 100%);
@@ -83,25 +77,26 @@ button[disabled]:hover {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	padding: 2rem;
 	border-radius: 20px;
 	gap: 1rem;
-	width: 100%;
-	max-width: 1200px;
+	width: auto;
+	/* max-width: 1200px; */
+	/* max-width: 900px; */
 }
 
 .left {
 	display: flex;
 	flex-direction: column;
 	gap: 1.9rem;
-	width: 100%;
-	max-width: 500px;
+	width: 450px;
+	/* min-width: 500px; */
 }
 
 .right {
-	width: 100%;
-	max-width: 500px;
+	width: 400px;
+	/* max-width: 50%; */
 }
 
 .label {
@@ -124,7 +119,7 @@ button[disabled]:hover {
 	font-weight: 700;
 	text-align: center;
 	border-radius: 5px;
-	width: 147.5px;
+	width: 130px;
 }
 
 .option:hover {
@@ -141,7 +136,7 @@ button[disabled]:hover {
 	font-weight: 700;
 	text-align: center;
 	border-radius: 5px;
-	width: 147.5px;
+	width: 130px;
 }
 
 .input-custom {
@@ -195,6 +190,7 @@ button[disabled]:hover {
 }
 
 .amount {
+	font-size: 2.5rem;
 	color: var(--strong-cyan);
 }
 
@@ -234,9 +230,21 @@ button[disabled]:hover {
 	cursor: pointer;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @media only screen and (max-width: 1024px) {
 	.calculator {
 		width: 500px;
+		/* display: flex; */
+		flex-wrap: wrap;
+	}
+
+	.option {
+		width: 145.75px;
 	}
 }
 

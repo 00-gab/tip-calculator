@@ -1,0 +1,247 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+:root {
+	--light-grayish-cyan: hsl(185, 41%, 84%);
+	--bg-white: hsl(0, 0%, 100%);
+	--very-dark-cyan: hsl(183, 100%, 15%);
+	--fc-gray: hsl(184, 14%, 56%);
+	--input-gray: rgb(241, 241, 241);
+	--ff-primary: 'Space Mono', monospace;
+	--strong-cyan: hsl(172, 67%, 45%);
+	--very-light-grayish-cyan: hsl(189, 41%, 97%);
+	--dark-grayish-cyan: hsl(186, 14%, 43%);
+}
+
+body {
+	font-family: var(--ff-primary);
+}
+
+main {
+	min-height: 100vh;
+	padding: 0.8em 0;
+	background: var(--light-grayish-cyan);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button[disabled]:hover {
+    background: var(--dark-grayish-cyan);
+	cursor: auto;
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+	color: var(--very-dark-cyan);
+}
+
+.title {
+	letter-spacing: 0.5rem;
+}
+
+.custom-input {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0.2em;
+	padding: 0.8rem;
+	background: var(--input-gray);
+	border-radius: 6px;
+}
+
+.input-style {
+	border: none;
+	outline: none;
+	text-align: right;
+	flex: 1;
+	font-size: 1.3rem;
+	font-weight: 700;
+	font-family: 'Space Mono', monospace;
+	background-color: transparent;
+	color: var(--very-dark-cyan);
+}
+
+.calculator {
+	height: auto;
+	background-color: var(--very-light-grayish-cyan);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 2rem;
+	border-radius: 20px;
+	gap: 1rem;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	gap: 1.9rem;
+	width: 100%;
+	max-width: 500px;
+}
+
+.right {
+	width: 100%;
+	max-width: 500px;
+}
+
+.label {
+	margin-bottom: 0.5rem;
+	color: var(--fc-gray);
+}
+
+.options-grid {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	gap: 1rem;
+	color: var(--bg-white);
+}
+
+.option {
+	background-color: var(--very-dark-cyan);
+	padding: 0.4rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: center;
+	border-radius: 5px;
+	width: 147.5px;
+}
+
+.option:hover {
+	background: var(--light-grayish-cyan);
+	color: var(--very-dark-cyan);
+	cursor: pointer;
+}
+
+.custom {
+	background-color: var(--input-gray);
+	color: var(--fc-gray);
+	padding: 0.4rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: center;
+	border-radius: 5px;
+	width: 147.5px;
+}
+
+.input-custom {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	text-align: right;
+	font-family: var(--ff-primary);
+	width: 100%;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--very-dark-cyan);
+}
+
+.people div {
+	display: flex;
+	justify-content: space-between;
+}
+
+#error {
+	display: none;
+	color: red;
+}
+
+.error {
+	outline: 3px solid red;
+}
+
+.result {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1.5rem;
+	padding: 1.8rem;
+	background-color: var(--very-dark-cyan);
+	border-radius: 12px;
+}
+
+.result div {
+	padding: 0.5rem 0;
+}
+
+.amount-desc {
+	color: var(--bg-white);
+}
+
+.per-person {
+	color: var(--fc-gray);
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.amount {
+	color: var(--strong-cyan);
+}
+
+.reset-btn {
+	justify-self: flex-end;
+	padding: 1rem;
+	font-weight: 700;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	background: var(--dark-grayish-cyan);
+	color: var(--very-dark-cyan);
+}
+
+.reset-btn:hover {
+	background: var(--light-grayish-cyan);
+	cursor: pointer;
+}
+
+.split {
+	display: flex;
+	justify-content: space-between;
+	gap: 1.5rem;
+}
+
+.active {
+	outline: 3px solid var(--strong-cyan);
+}
+
+.active-btn {
+	background: var(--strong-cyan);
+}
+
+.active-percentage {
+	background: var(--strong-cyan);
+	color: var(--very-dark-cyan);
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+	.calculator {
+		width: 500px;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.calculator {
+		width: 100%;
+	}
+}
